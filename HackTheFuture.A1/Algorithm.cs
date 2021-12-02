@@ -70,7 +70,7 @@ namespace HackTheFuture.A1
             // Om te zien of ons antwoord juist was moeten we de response uitlezen
             // Een 200 status code betekent dus niet dat je antwoord juist was!
             var samplePostResponseValue = await samplePostResponse.Content.ReadAsStringAsync();
-
+            //Console.WriteLine(samplePostResponseValue);
             // De url om de puzzle challenge data op te halen
             var puzzleUrl = "api/path/1/easy/Puzzle";
             // We doen de GET request en wachten op de het antwoord
@@ -79,7 +79,7 @@ namespace HackTheFuture.A1
 
             // Je zoekt het antwoord
             var puzzleAnswer = GetAnswer(puzzleGetResponse);
-
+            Console.WriteLine(puzzleAnswer);
             // We sturen het antwoord met een POST request
             // Het antwoord dat we moeten versturen is een getal dus gebruiken we int
             // De response die we krijgen zal ons zeggen of ons antwoord juist was

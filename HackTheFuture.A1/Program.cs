@@ -13,6 +13,7 @@ namespace HackTheFuture.A1
         {
             Task.WaitAny(Algorithm.GetNumbers());
             Task.WaitAny(Algorithm.sendToPuzzleAsync());
+            Console.ReadLine();
         }
 
     }
